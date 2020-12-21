@@ -37,7 +37,7 @@ function startUp() {
                     viewEmployee();
                     break;
                 case "View Employees by Department":
-                    viewEmmployeeByDepartment();
+                    viewEmployeeByDepartment();
                     break;
                 case "Add Employee":
                     addEmployee();
@@ -75,7 +75,7 @@ function viewEmployee() {
         if (err) throw err;
 
         console.table(res);
-        console.log("There they are!\n");
+        console.log("Viewing employees!\n");
         
         startUp();
     });
@@ -101,7 +101,7 @@ function viewEmployeeByDepartment() {
         }));
 
         console.table(res);
-        console.log("Displaying department!\n");
+        console.log("Viewing by department!\n");
         
         promptDepartment(departmentChoices);
     });
