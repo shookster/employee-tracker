@@ -4,9 +4,9 @@ require("console.table");
 
 var connection = mysql.createConnection({
     host: "localhost",
-    port: 3000,
+    port: 3306,
     user: "root",
-    password: "",
+    password: "Kestrel spins behind cat",
     database: "employeesDB"
 });
 
@@ -61,7 +61,7 @@ function startUp() {
 function viewEmployee() {
     console.log("displaying employees\n");
 
-    let query =
+    var query =
         `SELECT e.id, e.first_name, e.last_name, r.title, d.name AS department, r.salary, CONCAT(m.first_name, ' ', m.last_name) AS manager
         FROM employee e
         LEFT JOIN role r
